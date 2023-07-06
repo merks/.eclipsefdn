@@ -2,9 +2,11 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('eclipse-orbit') {
   settings+: {
+    blog: "https://projects.eclipse.org/projects/tools.orbit",
     default_repository_permission: "none",
     dependabot_security_updates_enabled_for_new_repositories: false,
-    description: "",
+    description: "Provides infrastructure for redistributing third-party libraries as OSGi bundles via p2 repositories.",
+    email: "orbit-dev@eclipse.org",
     name: "Eclipse Orbit",
     packages_containers_internal: false,
     packages_containers_public: false,
