@@ -2,9 +2,9 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('eclipse-orbit') {
   settings+: {
+    default_repository_permission: "none",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "",
-    members_can_create_public_repositories: true,
     name: "Eclipse Orbit",
     packages_containers_internal: false,
     packages_containers_public: false,
