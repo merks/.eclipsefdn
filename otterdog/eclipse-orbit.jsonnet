@@ -14,6 +14,9 @@ orgs.newOrg('eclipse-orbit') {
     web_commit_signoff_required: false,
   },
   _repositories+:: [
+    orgs.newRepo('.github') {
+      description: "Global configurations for the eclipse-orbit GitHub organization",
+    },
     orgs.newRepo('ebr') {
       allow_auto_merge: true,
       allow_merge_commit: false,
