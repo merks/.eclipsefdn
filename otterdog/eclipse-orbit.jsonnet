@@ -51,5 +51,14 @@ orgs.newOrg('eclipse-orbit') {
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('orbit-simrel') {
+      allow_merge_commit: false,
+      allow_update_branch: false,
+      description: "Third-party libraries bundled using Maven target locations.",
+      has_wiki: false,
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+    },
   ],
 }
