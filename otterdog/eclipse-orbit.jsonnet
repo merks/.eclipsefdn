@@ -24,8 +24,6 @@ orgs.newOrg('eclipse-orbit') {
       description: "Eclipse Bundle Recipe infrastructure.",
       has_projects: false,
       has_wiki: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://notify.travis-ci.org') {
@@ -47,8 +45,13 @@ orgs.newOrg('eclipse-orbit') {
       allow_update_branch: false,
       description: "Third-party libraries bundled using Eclipse Bundle Recipes.",
       has_wiki: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('orbit-simrel') {
+      allow_merge_commit: false,
+      allow_update_branch: false,
+      description: "Third-party libraries bundled using Maven target locations.",
+      has_wiki: false,
       web_commit_signoff_required: false,
     },
   ],
