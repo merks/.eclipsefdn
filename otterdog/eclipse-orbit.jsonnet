@@ -58,5 +58,13 @@ orgs.newOrg('eclipse-orbit') {
       has_wiki: false,
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('orbit-legacy') {
+      allow_merge_commit: false,
+      allow_update_branch: false,
+      description: "Third-party libraries not available with source code elsewhere.",
+      has_discussions: true,
+      has_wiki: false,
+      web_commit_signoff_required: false,
+    },
   ],
 }
